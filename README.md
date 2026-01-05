@@ -42,3 +42,35 @@ Created three source dataframes:
 project_data['Cost'] = project_data.groupby('ID')['Cost'].transform(
     lambda x: x.fillna(x.rolling(window=2, min_periods=1).mean())
 )
+```
+
+Business Insights Discovered:
+
+Cost Distribution: Project costs range from ₹2L to ₹55L, with average ₹19L per project
+
+Success Rate: 57% of projects completed successfully, 21% ongoing, 21% failed
+
+Bonus Patterns: Senior employees (Level 3) received bonuses averaging ₹12L; Level 2 averaged ₹5L
+
+Geographic: SP (São Paulo) has highest order concentration; remote teams in other cities maintain comparable productivity
+
+💻 Tech Stack
+Language: Python 3.x
+
+Libraries:
+
+Pandas (data manipulation & aggregation)
+
+NumPy (numerical operations)
+
+Standard library (data structures)
+
+Techniques:
+
+Running average imputation for missing values
+
+DataFrame merges and joins
+
+Groupby aggregations
+
+Data type conversions and validations
